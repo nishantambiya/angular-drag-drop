@@ -1,0 +1,98 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="title"><h2>Welcome to Buyers dashboard</h2></div>
+
+        <div class="row" cdkDropListGroup >
+
+            <div class="col-md-4"  >
+
+                <mat-accordian cdkDropList  [cdkDropListData]="movies_1" (cdkDropListDropped)="drop($event)">
+                    <mat-expansion-panel  *ngFor="let item of movies_1" cdkDrag style="margin-top: 10px;" >
+                        <mat-expansion-panel-header style="background: #f8f8f8">
+
+                            <mat-panel-title>
+                                <div cdkDragHandle>
+                                    <svg width="20px" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                                </div>
+                                <span>  {{item}} </span>
+
+                            </mat-panel-title>
+                            <mat-panel-description>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <br>
+                        <app-projects *ngIf="item ==='projects'"></app-projects>
+                        <app-requests *ngIf="item ==='requests'"></app-requests>
+                        <app-responses *ngIf="item ==='responses'"></app-responses>
+                        <app-savings-by-project *ngIf="item ==='savings-by-project'"></app-savings-by-project>
+                        <app-savings-by-spent-category *ngIf="item ==='savings-by-spent-category'"></app-savings-by-spent-category>
+                        <app-profile *ngIf="item ==='profile'"></app-profile>
+
+
+
+
+                    </mat-expansion-panel>
+                </mat-accordian>
+            </div>
+            <div class="col-md-4"  >
+
+                <mat-accordian cdkDropList [cdkDropListData]="movies_2" (cdkDropListDropped)="drop($event)">
+                    <mat-expansion-panel *ngFor="let item of movies_2" cdkDrag style="margin-top: 10px;">
+                        <mat-expansion-panel-header style="background: #f8f8f8">
+
+                            <mat-panel-title>
+                                <div cdkDragHandle>
+                                    <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                                </div>
+                                {{item}}
+                            </mat-panel-title>
+                            <mat-panel-description>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <app-projects *ngIf="item ==='projects'"></app-projects>
+                        <app-requests *ngIf="item ==='requests'"></app-requests>
+                        <app-responses *ngIf="item ==='responses'"></app-responses>
+                        <app-savings-by-project *ngIf="item ==='savings-by-project'"></app-savings-by-project>
+                        <app-savings-by-spent-category *ngIf="item ==='savings-by-spent-category'"></app-savings-by-spent-category>
+                        <app-profile *ngIf="item ==='profile'"></app-profile>
+
+                    </mat-expansion-panel>
+                </mat-accordian>
+            </div>
+            <div class="col-md-4"  >
+
+                <mat-accordian cdkDropList  [cdkDropListData]="movies_3" (cdkDropListDropped)="drop($event)"    >
+                    <mat-expansion-panel *ngFor="let item of movies_3" cdkDrag style="margin-top: 10px;">
+                        <mat-expansion-panel-header style="background: #f8f8f8">
+
+                            <mat-panel-title>
+                                <div cdkDragHandle>
+                                    <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                                </div>
+                                {{item}}
+                            </mat-panel-title>
+                            <mat-panel-description>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <app-projects *ngIf="item ==='projects'"></app-projects>
+                        <app-requests *ngIf="item ==='requests'"></app-requests>
+                        <app-responses *ngIf="item ==='responses'"></app-responses>
+                        <app-savings-by-project *ngIf="item ==='savings-by-project'"></app-savings-by-project>
+                        <app-savings-by-spent-category *ngIf="item ==='savings-by-spent-category'"></app-savings-by-spent-category>
+                        <app-profile *ngIf="item ==='profile'"></app-profile>
+
+                    </mat-expansion-panel>
+                </mat-accordian>
+            </div>
+        </div>
+    </div>
+</div>
